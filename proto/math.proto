@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "myfirstserviceapp/proto";
+
+service MathService {
+    rpc Sum(SumRequest) returns (SumResponse);
+    rpc Pow(SumRequest) returns (SumResponse);
+    rpc Minus(SumRequest) returns (SumResponse);
+}
+
+message SumRequest {
+    int64 x = 1;
+    int64 y = 2;
+}
+
+message SumResponse {
+    int64 result = 1;
+}
